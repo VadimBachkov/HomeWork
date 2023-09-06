@@ -4,27 +4,25 @@ import java.util.Scanner;
 public class Ex2_Les2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите длину массива");
-        int arrLength = sc.nextInt();
-        System.out.println("Введите минимальное число массива");
-        int min = sc.nextInt();
-        System.out.println("Введите максимальное число массива");
-        int max = sc.nextInt();
+        int arrLength ;
+        int min;
+        int max;
+
+        do {
+            System.out.println("Введите размер массива: ");
+            arrLength = sc.nextInt();
+        } while (arrLength <= 0);
+        do {
+            System.out.println("Введите нижнюю границу диапазона массива: ");
+            min = sc.nextInt();
+            System.out.println("Введите верхнюю границу диапазона массива: ");
+            max = sc.nextInt();
+        } while (min> max);
 
         int [] array = new int[arrLength];
         for (int i = 0; i<array.length; i++){
             array[i] = (int) ((Math.random() * (max-min) + min));
         }
-        if(arrLength < 0){
-            System.out.println("Введите длину массива заново");
-            arrLength = sc.nextInt();
-        }else if (min > max){
-            System.out.println("Введите миниально и максимальное значение заново");
-            min =sc.nextInt();
-            max = sc.nextInt();
-            System.out.println(Arrays.toString(array));
-        }else {
-            System.out.println(Arrays.toString(array));
-        }
+        System.out.println(Arrays.toString(array));
     }
 }

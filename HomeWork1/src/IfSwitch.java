@@ -1,22 +1,22 @@
-public class Exersize2 {
+public class IfSwitch {
 
     public static void main(String[] args) {
 
         int day = 4;
 
-        if (day == 0){
+        if (day == 1){
             System.out.println("День недели пондельник");
-        }else if (day == 1){
+        }else if (day == 2){
             System.out.println("День недели вторник");
-        }else if (day == 2) {
-            System.out.println("День недели среда");
         }else if (day == 3) {
-            System.out.println("День недели четверг");
+            System.out.println("День недели среда");
         }else if (day == 4) {
-            System.out.println("День недели пятница");
+            System.out.println("День недели четверг");
         }else if (day == 5) {
-            System.out.println("День недели суббота");
+            System.out.println("День недели пятница");
         }else if (day == 6) {
+            System.out.println("День недели суббота");
+        }else if (day == 7) {
             System.out.println("День недели воскресенье");
         }
 

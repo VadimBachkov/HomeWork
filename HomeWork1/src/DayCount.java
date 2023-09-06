@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exersize4 {
+public class DayCount {
 
     public static void main(String[] args) {
         System.out.println("Введите номер года:");
