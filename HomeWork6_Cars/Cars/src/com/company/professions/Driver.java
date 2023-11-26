@@ -2,41 +2,36 @@ package com.company.professions;
 
 public class Driver {
 
-    private String name;
-    private String surname;
-    private String patronymic;
+    private String fio;
+    private int driverExperience;
 
-    private int drivingExperience;
-
-    public String getName() {
-        return name;
+    public Driver(String fio, int drivingExperience) {
+        this.fio = fio;
+        this.setDriverExperience(drivingExperience);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+
+    public String toString(){
+        return String.format("Водитель %s со стажем %s лет", fio, driverExperience);
+    }
+    public String getFio(){
+        return fio;
+    }
+    public void setFio(String fio){
+        this.fio = fio;
     }
 
-    public String getSurname() {
-        return surname;
+    public int getDriverExperience() {
+        return driverExperience;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
-
-    public int getDrivingExperience() {
-        return drivingExperience;
-    }
-
-    public void setDrivingExperience(int drivingExperience) {
-        this.drivingExperience = drivingExperience;
+    public void setDriverExperience(int driverExperience) {
+        if (driverExperience < 0) {
+            System.out.println("Стаж указан неверно");
+        } else {
+            this.driverExperience = driverExperience;
+        }
     }
 }
+
