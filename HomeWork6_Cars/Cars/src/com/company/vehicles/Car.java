@@ -44,7 +44,7 @@ public class Car {
 
    @Override
       public String toString(){
-        String str = "Автомобиль марки " + carBrand + " класса " + carLevel + ", вес " + carWeight + ". " + driver.toString() + ". " + motor.toString();
+        String str = "Автомобиль марки " + carBrand + " класса " + carLevel + ", вес " + carWeight + ". " + driver.toString() + ". ";
         System.out.println(str);
         return str;
     }

@@ -13,7 +13,7 @@ public class Lorry extends Car {
     @Override
     public String toString() {
         String str = "Автомобиль марки " + this.getCarBrand() + " класса " + this.getCarLevel() + ", вес " + this.getCarWeight() + ", рузоподъемность " + liftingCapacity + ". " +
-                this.getDriver().toString() + ". " + this.getMotor().toString();
+                this.getDriver().toString() + ". ";
         System.out.println(str);
         return str;
     }
